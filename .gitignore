@@ -1,0 +1,39 @@
+# Зависимости
+node_modules/
+
+# Сборка и артефакты
+dist/
+*.tsbuildinfo
+
+# Логи и отладка
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Окружение и секреты
+.env
+.env.*
+!.env.example
+
+# Отчёты тестов и покрытие
+coverage/
+.nyc_output/
+
+# ОС и редакторы
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.idea/
+.vscode/
+*.sublime-*
+
+# Временные файлы
+tmp/
+temp/
+.cache/
+prj/
+
+.claude/
+.cursor/

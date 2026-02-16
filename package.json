@@ -1,0 +1,54 @@
+{
+  "name": "garmin-cli",
+  "version": "1.0.0",
+  "description": "CLI for Garmin Connect",
+  "type": "module",
+  "main": "dist/cli.js",
+  "bin": {
+    "garmin-cli": "./dist/cli.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "garmin": "tsx src/cli.ts",
+    "garmin:debug": "tsx src/cli.ts --debug",
+    "garmin:json": "tsx src/cli.ts --json",
+    "garmin:json-debug": "tsx src/cli.ts --json --debug",
+    "prepare": "npm run build",
+    "lint": "eslint src",
+    "typecheck": "tsc --noEmit",
+    "test": "npm run build && vitest run",
+    "test:unit": "npm run build && vitest run --exclude '**/*.integration.test.ts'",
+    "test:integration": "npm run build && vitest run -c vitest.integration.config.ts",
+    "test:watch": "vitest"
+  },
+  "keywords": [
+    "garmin",
+    "connect",
+    "cli",
+    "health",
+    "activities"
+  ],
+  "author": "",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "axios": "^1.13.5",
+    "commander": "^14.0.3",
+    "kleur": "^4.1.5"
+  },
+  "devDependencies": {
+    "@types/node": "^25.2.3",
+    "@typescript-eslint/eslint-plugin": "^8.55.0",
+    "@typescript-eslint/parser": "^8.55.0",
+    "eslint": "^9.39.2",
+    "globals": "^15.14.0",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.18"
+  }
+}
