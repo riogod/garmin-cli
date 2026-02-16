@@ -31,8 +31,16 @@
     "health",
     "activities"
   ],
-  "author": "",
+  "author": "Vyacheslav Krasnyansky",
+  "homepage": "https://github.com/riogod/garmin-cli",
+  "bugs": {
+    "url": "https://github.com/riogod/garmin-cli/issues"
+  },
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/riogod/garmin-cli.git"
+  },
   "engines": {
     "node": ">=18"
   },

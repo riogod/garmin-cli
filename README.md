@@ -314,6 +314,23 @@ Each subcommand takes optional `[date]` (YYYY-MM-DD, default today).
 
 ---
 
+## Publishing (npm)
+
+CI builds and publishes to npm via [GitHub Actions](.github/workflows/publish.yml).
+
+**Setup:** In the repo → Settings → Secrets and variables → Actions, add secret **`NPM_TOKEN`** (npm Automation token or legacy token with “Publish packages” from [npm Access Tokens](https://www.npmjs.com/settings/~your-username/tokens)).
+
+**Trigger a publish:**
+
+1. Bump `version` in `package.json`, commit and push.
+2. Either:
+   - **Tag:** `git tag v1.0.0 && git push origin v1.0.0`, or  
+   - **Release:** create a new Release in GitHub (tag e.g. `v1.0.0`).
+
+The workflow runs lint, typecheck, unit tests, build, then `npm publish --provenance --access public`.
+
+---
+
 ## License
 
 MIT
