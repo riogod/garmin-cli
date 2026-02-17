@@ -1,6 +1,6 @@
 {
   "name": "garmin-cli",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "CLI for Garmin Connect",
   "type": "module",
   "main": "dist/cli.js",
